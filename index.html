@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WDD 231 - Web Frontend Development I - Sehee Jang</title>
     <meta
       name="description"
-      content="WDD131 - Web Frontend Development I | Sehee Jang | Homepage"
+      content="WDD231 - Web Frontend Development I | Sehee Jang | Homepage"
     />
     <meta name="author" content="Sehee Jang" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
 
     <!-- styles -->
-    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- scripts -->
-    <script src="scripts/script.js" defer></script>
+    <!-- script -->
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/script.js" defer></script>
   </head>
 
   <body>
@@ -37,7 +41,7 @@
       </h1>
       <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
       <nav>
-        <a href="/">Home</a>
+        <a href="/" class="active">Home</a>
         <a href="/">Chamber</a>
         <a href="https://github.com/Sehee-Jang">GitHub Profile</a>
         <a href="https://www.linkedin.com/in/seheejang/">LinkedIn</a>
@@ -49,10 +53,8 @@
         <h2>Course Work</h2>
 
         <div class="card-cont">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+          <ul id="course-list">
+            <!-- 코스가 동적으로 렌더링 될 영역 -->
           </ul>
         </div>
       </section>
@@ -83,13 +85,8 @@
             <div class="category">CSE</div>
             <div class="category">WDD</div>
           </div>
-          <div class="classes">
-            <div class="class">CSE 110</div>
-            <div class="class">WDD 130</div>
-            <div class="class">CSE 111</div>
-            <div class="class">CSE 210</div>
-            <div class="class">WDD 131</div>
-            <div class="class">WDD 231</div>
+          <div class="classes" id="class-list">
+            <!-- 코스가 동적으로 렌더링될 영역: 여기에서 카테고리별로 코스를 정렬할 수 있음 -->
           </div>
         </div>
       </section>

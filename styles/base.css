@@ -58,10 +58,7 @@ header h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 8px;
 }
 
 .card-cont {
@@ -98,6 +95,15 @@ nav {
 
 nav a {
   color: #fff;
+}
+
+nav a:hover {
+  color: #fcc500;
+}
+
+nav a.active {
+  color: #fcc500; /* 배경색 */
+  font-weight: bold;
 }
 
 /* 모바일 스타일 */
@@ -138,6 +144,20 @@ nav a {
   }
 }
 
+.course-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.course-card:hover {
+  background-color: #eaeaea;
+}
+
 .categories {
   display: flex;
   justify-content: center;
@@ -163,12 +183,6 @@ nav a {
   gap: 10px; /* 카드 간격 */
 }
 
-.class {
-  background-color: #f0f0f0; /* 클래스 배경색 */
-  border-radius: 10px; /* 둥근 모서리 */
-  padding: 15px; /* 패딩 조정 */
-  text-align: center; /* 중앙 정렬 */
-}
 
 /* 모바일 화면에서 클래스 항목 한 줄에 하나씩 보이게 설정 */
 @media (max-width: 768px) {
