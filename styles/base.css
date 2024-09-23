@@ -74,7 +74,15 @@ header h1 {
 }
 
 .card.content3 {
+  width: 100%;
+  min-height: 300px;
+  box-sizing: border-box;
   grid-column: span 2; /* 두 열을 모두 차지하도록 설정 */
+}
+
+.card.content3 img {
+  width: 100%; 
+  height: auto;
 }
 
 footer {
