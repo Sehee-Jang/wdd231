@@ -74,10 +74,9 @@ nav {
   border: 1px solid #ccc;
 }
 
-.content2 {
-  min-height: 300px;
+.card.content2 {
+  min-height: 300px; /* 적절한 높이로 설정 */
 }
-
 .card-cont {
   padding: 40px;
   min-height: 200px;
