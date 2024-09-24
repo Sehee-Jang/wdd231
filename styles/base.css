@@ -73,6 +73,11 @@ nav {
   flex-direction: column;
   border: 1px solid #ccc;
 }
+
+.content2 {
+  min-height: 300px;
+}
+
 .card-cont {
   padding: 40px;
   min-height: 200px;
