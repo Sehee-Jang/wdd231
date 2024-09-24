@@ -130,6 +130,7 @@ nav a.active {
   font-size: 24px;
 }
 .course-card {
+  color: #333;
   background-color: #f0f0f0;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -140,6 +141,20 @@ nav a.active {
 }
 .course-card:hover {
   background-color: #eaeaea;
+}
+.course-card h3,
+.course-card p {
+  color: #333;
+}
+/* 완료된 과목 */
+.completed {
+  text-decoration: line-through;
+  color: #bcbcbc;
+}
+
+.completed h3,
+.completed p {
+  color: #bcbcbc;
 }
 
 .categories {

@@ -90,9 +90,7 @@ function filterCourses(category) {
 
     // 완료된 코스 스타일링
     if (course.completed) {
-      courseCard.style.textDecoration = "line-through"; // 취소선 추가
-      // courseCard.style.backgroundColor = "#c8e6c9"; // 완료된 과목 스타일
-      courseCard.style.color = "#bcbcbc";
+      courseCard.classList.add("completed"); // 완료된 과목에 클래스 추가
     }
 
     classListDiv.appendChild(courseCard);
