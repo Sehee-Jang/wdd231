@@ -61,15 +61,24 @@ header {
   flex-direction: column;
   position: relative;
 }
+header h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
 .about-img {
   display: block;
-  max-width: 100%;
+  width: 100px;
   height: auto;
 }
+
 .card,
 nav {
   display: flex;
 }
+
 .card {
   background-color: #fff;
   border-radius: 8px;
@@ -100,10 +109,7 @@ nav {
   box-sizing: border-box;
   grid-column: span 2;
 }
-.content3 img {
-  width: 100%;
-  height: auto;
-}
+
 footer {
   padding: 10px 0;
 }
@@ -135,10 +141,7 @@ nav a.active {
 .course-card:hover {
   background-color: #eaeaea;
 }
-.course-card h3,
-.course-card p {
-  color: #333;
-}
+
 .categories {
   display: flex;
   justify-content: center;
