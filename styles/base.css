@@ -73,10 +73,6 @@ nav {
   flex-direction: column;
   border: 1px solid #ccc;
 }
-
-.card.content2 {
-  min-height: 300px; /* 적절한 높이로 설정 */
-}
 .card-cont {
   padding: 40px;
   min-height: 200px;
@@ -90,13 +86,20 @@ nav {
 .card-cont {
   min-height: 100px;
 }
-.card .content3 {
-  width: 100%;
+
+.content1,
+.content2,
+.content3 {
   min-height: 300px;
+}
+
+.content3 {
+  width: 100%;
   box-sizing: border-box;
   grid-column: span 2;
 }
-.card .content3 img {
+
+.content3 img {
   width: 100%;
   height: auto;
 }
