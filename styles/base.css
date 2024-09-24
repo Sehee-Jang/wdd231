@@ -87,8 +87,10 @@ nav {
   border: 1px solid #ccc;
 }
 .card-cont {
+  width: 100%;
+  min-height: 150px;
   padding: 40px;
-  min-height: 200px;
+  box-sizing: border-box;
 }
 .card h2 {
   background-color: #fcc500;
@@ -96,9 +98,7 @@ nav {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-.card-cont {
-  min-height: 100px;
-}
+
 .content1,
 .content2,
 .content3 {
@@ -129,6 +129,7 @@ nav a.active {
   display: none;
   font-size: 24px;
 }
+
 .course-card {
   color: #333;
   background-color: #f0f0f0;
