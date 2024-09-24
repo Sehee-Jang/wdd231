@@ -91,6 +91,7 @@ nav {
   min-height: 150px;
   padding: 40px;
   box-sizing: border-box;
+  position: relative; 
 }
 .card h2 {
   background-color: #fcc500;
