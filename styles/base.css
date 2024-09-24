@@ -9,6 +9,10 @@ footer,
 header {
   background-color: #333;
 }
+img {
+  width: 100%;
+  height: auto;
+}
 nav a.active,
 nav a:hover {
   color: #fcc500;
@@ -86,19 +90,16 @@ nav {
 .card-cont {
   min-height: 100px;
 }
-
 .content1,
 .content2,
 .content3 {
   min-height: 300px;
 }
-
 .content3 {
   width: 100%;
   box-sizing: border-box;
   grid-column: span 2;
 }
-
 .content3 img {
   width: 100%;
   height: auto;
