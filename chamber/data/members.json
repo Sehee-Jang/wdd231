@@ -1,0 +1,65 @@
+[
+  {
+    "name": "ABC Bakery",
+    "address": "123 Main St, Timbuktu, Mali",
+    "phone": "+223 1234 5678",
+    "website": "https://www.abcbakery.com",
+    "image": "abc_bakery.jpg",
+    "membershipLevel": 1,
+    "description": "Delicious baked goods made fresh every day."
+  },
+  {
+    "name": "Timbuktu Bookstore",
+    "address": "456 Elm St, Timbuktu, Mali",
+    "phone": "+223 2345 6789",
+    "website": "https://www.timbuktu-bookstore.com",
+    "image": "timbuktu_bookstore.jpg",
+    "membershipLevel": 2,
+    "description": "Your go-to place for all your reading needs."
+  },
+  {
+    "name": "Timbuktu Tours",
+    "address": "789 Maple Ave, Timbuktu, Mali",
+    "phone": "+223 3456 7890",
+    "website": "https://www.timbuktu-tours.com",
+    "image": "timbuktu_tours.jpg",
+    "membershipLevel": 3,
+    "description": "Explore the wonders of Timbuktu with our guided tours."
+  },
+  {
+    "name": "Café Timbuktu",
+    "address": "321 Oak St, Timbuktu, Mali",
+    "phone": "+223 4567 8901",
+    "website": "https://www.cafetimbuktu.com",
+    "image": "cafe_timbuktu.jpg",
+    "membershipLevel": 1,
+    "description": "Enjoy a cozy atmosphere and great coffee."
+  },
+  {
+    "name": "Timbuktu Fitness Center",
+    "address": "654 Pine St, Timbuktu, Mali",
+    "phone": "+223 5678 9012",
+    "website": "https://www.timbuktufitness.com",
+    "image": "timbuktu_fitness.jpg",
+    "membershipLevel": 2,
+    "description": "Stay fit and healthy with our top-notch facilities."
+  },
+  {
+    "name": "Timbuktu Art Gallery",
+    "address": "987 Birch St, Timbuktu, Mali",
+    "phone": "+223 6789 0123",
+    "website": "https://www.timbuktuartgallery.com",
+    "image": "timbuktu_art_gallery.jpg",
+    "membershipLevel": 3,
+    "description": "Discover local artists and their amazing work."
+  },
+  {
+    "name": "Timbuktu Restaurant",
+    "address": "135 Cedar St, Timbuktu, Mali",
+    "phone": "+223 7890 1234",
+    "website": "https://www.timbukturestaurant.com",
+    "image": "timbuktu_restaurant.jpg",
+    "membershipLevel": 1,
+    "description": "Taste the best local cuisine in a family-friendly environment."
+  }
+]
