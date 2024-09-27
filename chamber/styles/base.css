@@ -113,6 +113,26 @@ main {
   border-radius: 8px;
 }
 
+.menu {
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  margin: 20px 0; /* 위아래 여백 */
+}
+
+.menu button {
+  padding: 10px 20px; /* 버튼 패딩 */
+  margin: 0 10px; /* 버튼 사이의 간격 */
+  background-color: #007bff; /* 버튼 색상 */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* 둥근 모서리 */
+}
+
+.menu button:hover {
+  background-color: #0056b3; /* 호버 시 색상 변화 */
+}
+
 .business-cards {
   display: flex; /* Enable Flexbox */
   flex-wrap: wrap; /* Allow wrapping to the next line */
@@ -128,6 +148,16 @@ main {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  word-wrap: break-word; /* 긴 단어를 줄바꿈 */
+  overflow-wrap: break-word; /* 긴 단어를 줄바꿈 */
+}
+
+.business-card img {
+  max-width: 100%; /* 이미지가 부모 요소 너비를 넘지 않도록 */
+  height: auto; /* 이미지 비율을 유지 */
+  display: block; /* 이미지 주변의 불필요한 여백을 없앰 */
+  border-radius: 8px; /* 이미지 모서리를 둥글게 (카드와 일치) */
+  object-fit: cover; /* 이미지가 카드 크기 안에서 잘리더라도 맞춰서 표시 */
 }
 
 .grid-view {
@@ -160,11 +190,22 @@ footer {
   margin: 0 10px; /* Horizontal spacing between divs */
 }
 
-.social-media a {
-  margin-right: 15px; /* Spacing between social media links */
+.social-media {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 10px; /* 아이콘과 텍스트 사이 간격 */
 }
 
+.social-icon {
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트가 세로로도 정렬되도록 */
+}
 
+.social-media a {
+  margin-right: 15px; /* Spacing between social media links */
+  text-decoration: none;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {

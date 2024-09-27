@@ -24,13 +24,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h2>${member.name}</h2>
                 <p class="business-tag">${member.description}</p>
                 <img src="./images/${member.image}" alt="${member.name}" />
-                <p><strong>Email:</strong> <a href="mailto:info@${
-                  member.website.split("//")[1]
-                }">${member.website.split("//")[1]}</a></p>
+                <p><strong>Address:</strong> ${member.address}</p>
                 <p><strong>Phone:</strong> ${member.phone}</p>
-                <p><strong>URL:</strong> <a href="${
-                  member.website
-                }" target="_blank">${member.website}</a></p>
+                <p><strong>URL:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
             `;
       return card;
     };
