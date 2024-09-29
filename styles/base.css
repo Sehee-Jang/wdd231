@@ -91,13 +91,18 @@ nav {
   min-height: 150px;
   padding: 40px;
   box-sizing: border-box;
-  position: relative; 
+  position: relative;
 }
 .card h2 {
   background-color: #fcc500;
   padding: 20px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+.card .total-credits {
+  text-align: center;
+  margin-top: 25px;
 }
 
 .content1,

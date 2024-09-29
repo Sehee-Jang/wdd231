@@ -66,6 +66,56 @@ const courses = [
 const courseListDiv = document.getElementById("course-list");
 const classListDiv = document.getElementById("class-list");
 const categoryButtons = document.querySelectorAll(".category");
+const totalCreditsDiv = document.getElementById("total-credits");
+
+// 전체 학점 계산 함수 (Course Work 섹션용)
+function calculateTotalCredits() {
+  const totalCredits = courses.reduce((sum, course) => sum + course.credits, 0);
+
+  console.log(`Total Credits: ${totalCredits}`);
+
+  // Course Work 섹션에 전체 학점 업데이트
+  const totalCourseCreditsDiv = document.getElementById("total-course-credits");
+  totalCourseCreditsDiv.innerHTML = ""; // 기존 내용 초기화
+  const totalCourseCreditText = document.createElement("h3");
+  totalCourseCreditText.classList.add("total-credits");
+  totalCourseCreditText.innerHTML = `Total Credits: ${totalCredits}`;
+  totalCourseCreditsDiv.appendChild(totalCourseCreditText);
+}
+
+// 전체 코스 렌더링 (Course Work 섹션)
+function renderCourses() {
+  courseListDiv.innerHTML = ""; // 초기화
+  courses.forEach((course) => {
+    const courseCard = document.createElement("div");
+    courseCard.classList.add("course-card");
+    courseCard.innerHTML = `
+      <h3>${course.title}</h3>
+      <p>${course.subject} ${course.number}</p>
+      <p>Credits: ${course.credits}</p>
+    `;
+    // 완료된 코스는 렌더링하지 않음
+    courseListDiv.appendChild(courseCard);
+  });
+  // 전체 코스에 대한 학점 계산 호출
+  calculateTotalCredits();
+}
+
+// 완료된 학점 계산 함수
+function calculateCompletedCredits(filteredCourses) {
+  const completedCredits = filteredCourses
+    .filter((course) => course.completed)
+    .reduce((sum, course) => sum + course.credits, 0);
+
+  console.log(`Total Credits: ${completedCredits}`);
+
+  // 학점 업데이트
+  totalCreditsDiv.innerHTML = ""; // 초기화
+  const totalCreditText = document.createElement("h3");
+  totalCreditText.classList.add("total-credits");
+  totalCreditText.innerHTML = `Completed Credits: ${completedCredits}`;
+  totalCreditsDiv.appendChild(totalCreditText);
+}
 
 // 필터링 함수
 function filterCourses(category) {
@@ -95,22 +145,9 @@ function filterCourses(category) {
 
     classListDiv.appendChild(courseCard);
   });
-}
 
-// 전체 코스 렌더링 (Course Work 섹션)
-function renderCourses() {
-  courseListDiv.innerHTML = ""; // 초기화
-  courses.forEach((course) => {
-    const courseCard = document.createElement("div");
-    courseCard.classList.add("course-card");
-    courseCard.innerHTML = `
-      <h3>${course.title}</h3>
-      <p>${course.subject} ${course.number}</p>
-      <p>Credits: ${course.credits}</p>
-    `;
-    // 완료된 코스는 렌더링하지 않음
-    courseListDiv.appendChild(courseCard);
-  });
+  // 필터링된 코스에 대한 완료된 학점 계산 호출
+  calculateCompletedCredits(filteredCourses);
 }
 
 // 카테고리 버튼 클릭 이벤트
@@ -119,10 +156,6 @@ categoryButtons.forEach((button) => {
     filterCourses(button.textContent);
   });
 });
-
-// 총 학점 계산 및 표시
-const totalCredits = courses.reduce((sum, course) => sum + course.credits, 0);
-console.log(`Total Credits: ${totalCredits}`); // 콘솔에서 총 학점 확인
 
 // 초기 렌더링
 renderCourses();
