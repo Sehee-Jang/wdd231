@@ -35,9 +35,6 @@
       property="og:description"
       content="Discover local businesses in Timbuktu. Find bakeries, bookstores, fitness centers, and more, complete with contact information and descriptions."
     />
-
-    <!-- script -->
-    <script src="scripts/script.js" defer></script>
   </head>
   <body>
     <header>
@@ -64,30 +61,44 @@
 
     <main>
       <section class="hero">
-        <img
-          src="./images/Timbuktu-slider-image.jpg"
-          alt="hero-image"
-        /><button>Keynote Tickets</button>
+        <img src="./images/Timbuktu-slider-image.jpg" alt="hero-image" />
       </section>
 
-      <section>
-        <h1>Home</h1>
-        <div class="contents">
-          <div class="content events"><h2>Events</h2></div>
-          <div class="content weather"><h2>Current Weather</h2></div>
-          <div class="content forecast"><h2>Weather Forecast</h2></div>
+      <section class="call-to-action">
+        <h2>Join the Chamber of Commerce</h2>
+        <a href="join.html"></a>
+      </section>
+
+      <section class="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>Networking Event - Date</li>
+          <li>Annual Conference - Date</li>
+          <li>Business Expo - Date</li>
+        </ul>
+      </section>
+
+      <section class="content weather">
+        <div class="content weather">
+          <h2>Current Weather</h2>
+          <p>
+            The current temperature in Timbuktu is
+            <span id="current-temp"></span>
+          </p>
+          <figure>
+            <img id="weather-icon" src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+        </div>
+        <div class="content forecast" id="forecast">
+          <h2>Weather Forecast</h2>
+          <div id="forecast-container"></div>
         </div>
       </section>
 
-      <section>
-        <div class="menu">
-          <button id="grid">⏹️Grid</button>
-          <button id="list">📄List</button>
-        </div>
-
-        <article class="grid">
-          <div class="business-cards" id="business-cards"></div>
-        </article>
+      <section class="spotlights">
+        <h2>Spotlight Members</h2>
+        <div id="spotlight-members"></div>
       </section>
     </main>
     <footer>
@@ -119,5 +130,9 @@
         <p>Last modified: <span id="last-modified"></span></p>
       </div>
     </footer>
+
+    <!-- script -->
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
   </body>
 </html>
