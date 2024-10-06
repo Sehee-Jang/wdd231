@@ -69,7 +69,6 @@ const apiFetch = async () => {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
-      console.log(data); // API 데이터 확인을 위한 로그
       displayResults(data); // 날씨 데이터를 화면에 표시
     } else {
       throw Error(await response.text());
