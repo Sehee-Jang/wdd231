@@ -51,8 +51,8 @@
 
       <nav id="navbar">
         <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Directory</a>
+          <a href="./index.html">Home</a>
+          <a href="./directory.html">Directory</a>
           <a href="#">Join</a>
           <a href="#">Discover</a>
         </div>
@@ -60,47 +60,74 @@
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section class="hero">
         <img src="./images/Timbuktu-slider-image.jpg" alt="hero-image" />
       </section>
 
-      <section class="call-to-action">
-        <h1>Join the Chamber of Commerce</h1>
-        <a href="join.html"></a>
-      </section>
+      <!-- Call to Action -->
+      <div class="cta-container">
+        <h2 class="cta-title">Join the Chamber of Commerce</h2>
+        <p class="cta-description">
+          Become a member today and enjoy exclusive benefits!
+        </p>
+        <a href="/join" class="cta-button">Join Now</a>
+      </div>
 
-      <section class="events">
-        <h2>Upcoming Events</h2>
-        <ul>
-          <li>Networking Event - Date</li>
-          <li>Annual Conference - Date</li>
-          <li>Business Expo - Date</li>
-        </ul>
-      </section>
+      <!-- Contents -->
+      <section>
+        <div class="contents">
+          <!-- Events -->
+          <div class="content weather">
+            <h2>Current Events</h2>
+            <div class="event-item">
+              <h3 class="event-title">Event Title 1</h3>
+              <p class="event-date">October 10, 2024</p>
+              <p class="event-description">
+                Brief description of the event. Highlight important details.
+              </p>
+              <a href="/event-1" class="event-link">Read More</a>
+            </div>
+            <div class="event-item">
+              <h3 class="event-title">Event Title 2</h3>
+              <p class="event-date">October 15, 2024</p>
+              <p class="event-description">
+                Brief description of the event. Highlight important details.
+              </p>
+              <a href="/event-2" class="event-link">Read More</a>
+            </div>
+            <!-- Add more event items as needed -->
+          </div>
 
-      <section class="content weather">
-        <div class="content weather">
-          <h2>Current Weather</h2>
-          <p>
-            The current temperature in Timbuktu is
-            <span id="current-temp"></span>
-          </p>
-          <figure>
-            <img id="weather-icon" src="" alt="" />
-            <figcaption></figcaption>
-          </figure>
+          <!-- Current Weather -->
+          <div class="content weather">
+            <h2>Current Weather</h2>
+            <p>
+              The current temperature in Timbuktu is
+              <span id="current-temp"></span>
+            </p>
+            <figure>
+              <img id="weather-icon" src="" alt="" />
+              <figcaption></figcaption>
+            </figure>
+          </div>
+
+          <!-- Weather Forecast -->
+          <div class="content forecast" id="forecast">
+            <h2>Weather Forecast</h2>
+            <div id="forecast-container"></div>
+          </div>
         </div>
-        <div class="content forecast" id="forecast">
-          <h2>Weather Forecast</h2>
-          <div id="forecast-container"></div>
-        </div>
       </section>
 
+      <!-- Spotlight Members -->
       <section class="spotlights">
         <h2>Spotlight Members</h2>
-        <div id="spotlight-members"></div>
+        <div id="spotlight-members" class="spotlight-members-cards"></div>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer>
       <div class="business-info">
         <p>Timbuktu Chamber of Commerce</p>
@@ -134,5 +161,6 @@
     <!-- script -->
     <script src="scripts/script.js" defer></script>
     <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
   </body>
 </html>

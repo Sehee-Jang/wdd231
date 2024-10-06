@@ -1,7 +1,10 @@
 /* Reset some default styles */
 body,
 h1,
-h2,
+h2 {
+  margin-top: 1.5rem; /* 타이틀 위의 간격 */
+  margin-bottom: 1rem; /* 타이틀 아래의 간격 */
+}
 p,
 ul {
   margin: 0;
@@ -54,8 +57,13 @@ header .business-name .bs-2 {
 }
 
 /* Nav styles */
-nav .nav-links {
+nav {
   display: flex; /* 가로 정렬 */
+  flex-direction: column; /* 세로 정렬 */
+}
+
+nav .nav-links {
+  display: flex; /* 기본적으로 가로 정렬 */
   gap: 15px;
 }
 
@@ -64,8 +72,9 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
-  color: #80bbff;
+/* 기본적으로 숨김 */
+nav .nav-links {
+  display: flex; /* 기본적으로 보여짐 */
 }
 
 /* Main Section Styles */
@@ -133,6 +142,135 @@ main {
   background-color: #0056b3; /* 호버 시 색상 변화 */
 }
 
+/* CTA Section Styles */
+.cta-container {
+  text-align: center;
+  margin: 20px 0; /* Spacing above and below */
+}
+
+.cta-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cta-description {
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  display: inline-block; /* Allow margins */
+  padding: 10px 20px;
+  background-color: #28a745; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.cta-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Current Events */
+.events-title {
+  font-size: 28px; /* Font size for title */
+  color: #007bff; /* Color for title */
+  margin-bottom: 20px; /* Space below title */
+  text-align: center; /* Centered text */
+}
+
+.event-item {
+  background-color: #fff; /* White background for event items */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners for event items */
+  padding: 15px; /* Spacing inside event items */
+  margin-bottom: 15px; /* Space below each event item */
+  transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.event-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.event-title {
+  font-size: 22px; /* Font size for event titles */
+  color: #333; /* Dark text color */
+  margin-bottom: 5px; /* Space below title */
+}
+
+.event-date {
+  font-size: 14px; /* Font size for event date */
+  color: #777; /* Lighter text color */
+  margin-bottom: 10px; /* Space below date */
+}
+
+.event-description {
+  font-size: 16px; /* Font size for description */
+  color: #555; /* Medium text color */
+  margin-bottom: 15px; /* Space below description */
+}
+
+.event-link {
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Button color */
+  font-weight: bold; /* Bold text for the link */
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.event-link:hover {
+  color: #0056b3; /* Darker shade on hover */
+}
+/* Sppotlight Section */
+/* 전체 섹션 스타일 */
+.spotlight-members {
+  display: flex;
+  flex-wrap: wrap; /* 여러 줄로 배치 가능 */
+  justify-content: center; /* 중앙 정렬 */
+  padding: 20px; /* 상하 여백 */
+  background-color: #f8f9fa; /* 배경색 */
+}
+
+/* 개별 카드 스타일 */
+.spotlight-member {
+  background-color: #ffffff; /* 카드 배경색 */
+  border: 1px solid #ddd; /* 카드 테두리 */
+  border-radius: 8px; /* 둥근 모서리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  margin: 15px; /* 카드 간의 여백 */
+  padding: 20px; /* 카드 내부 여백 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  transition: transform 0.3s, box-shadow 0.3s; /* 전환 효과 */
+}
+
+/* 카드에 호버 효과 */
+.spotlight-member:hover {
+  transform: translateY(-5px); /* 위로 살짝 떠오르는 효과 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 깊이 증가 */
+}
+
+/* 이미지 스타일 */
+.spotlight-member img {
+  width: 100px; /* 이미지 너비 */
+  height: 100px; /* 이미지 높이 */
+  border-radius: 50%; /* 둥근 이미지 */
+  margin-bottom: 15px; /* 이미지와 텍스트 간 여백 */
+}
+
+/* 이름 스타일 */
+.spotlight-member h3 {
+  font-size: 1.5rem; /* 이름 크기 */
+  margin: 10px 0; /* 이름 간 여백 */
+}
+
+/* 역할 또는 설명 스타일 */
+.spotlight-member p {
+  font-size: 1rem; /* 설명 크기 */
+  color: #666; /* 설명 색상 */
+}
+
+/* Spotlight Members Cards & Business Cards */
+.spotlight-members-cards,
 .business-cards {
   display: flex; /* Enable Flexbox */
   flex-wrap: wrap; /* Allow wrapping to the next line */
@@ -140,6 +278,7 @@ main {
   margin-top: 20px;
 }
 
+.spotlight-card,
 .business-card {
   flex: 1 1 calc(30% - 20px); /* Each card takes up about 30% of the row with space for margins */
   margin: 10px; /* Margin around each card */
@@ -152,6 +291,7 @@ main {
   overflow-wrap: break-word; /* 긴 단어를 줄바꿈 */
 }
 
+.spotlight-card img,
 .business-card img {
   max-width: 100%; /* 이미지가 부모 요소 너비를 넘지 않도록 */
   height: auto; /* 이미지 비율을 유지 */
@@ -179,8 +319,9 @@ footer {
   justify-content: space-between; /* Space out items */
   align-items: flex-start; /* Align items to the top */
   padding: 20px;
-  background-color: #f8f8f8; /* Light background color */
+  background-color: #004080; /* Light background color */
   border-top: 1px solid #ccc; /* Top border for separation */
+  color: #fff;
 }
 
 .business-info,
@@ -195,40 +336,59 @@ footer {
   justify-content: center; /* 가로 중앙 정렬 */
   align-items: center; /* 세로 중앙 정렬 */
   gap: 10px; /* 아이콘과 텍스트 사이 간격 */
+
 }
 
 .social-icon {
   display: flex;
-  align-items: center; /* 아이콘과 텍스트가 세로로도 정렬되도록 */
+  flex-direction: column;
+  align-items: center; 
 }
 
 .social-media a {
-  margin-right: 15px; /* Spacing between social media links */
-  text-decoration: none;
+  color: white; /* White text for social icons */
+  margin: 0 10px; /* Spacing between icons */
+  text-decoration: none; /* No underline */
 }
 
+.social-media a:hover {
+  opacity: 0.7; /* Slightly dim icon on hover */
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  @media (max-width: 768px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .hamburger {
-    display: block;
-  }
+    .hamburger {
+      display: block; /* 모바일에서는 햄버거 버튼 보이기 */
+    }
 
-  nav .nav-links {
-    display: none; /* 초기에는 숨김 */
-    flex-direction: row; /* 가로 정렬 유지 */
-    justify-content: center; /* 가운데 정렬 */
-    width: 100%; /* 전체 너비 차지 */
-    margin-top: 10px; /* 햄버거 버튼 아래에 여백 */
-  }
+    /* 햄버거 클릭 시 보여짐 */
+    nav.active .nav-links {
+      display: flex; /* 햄버거 클릭 시 가로로 메뉴 표시 */
+      flex-direction: column; /* 세로 정렬 */
+      background-color: #004080; /* 배경색 추가 (헤더와 동일하게) */
+      padding: 10px 20px; /* 메뉴 사이의 여백 */
+      position: absolute; /* 메뉴를 헤더 아래에 위치시키기 */
+      top: 60px; /* 헤더 높이 만큼 떨어뜨리기 */
+      left: 0;
+      width: 100%; /* 전체 너비 차지 */
+    }
 
-  nav.active .nav-links {
-    display: flex; /* 햄버거 클릭 시 가로로 메뉴 표시 */
+    nav .nav-links {
+      display: none;
+      z-index: 999 !important;
+    }
+    nav a {
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
   }
   .hero {
     height: 200px;
