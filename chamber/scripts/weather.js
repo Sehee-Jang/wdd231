@@ -5,11 +5,19 @@ const captionDesc = document.querySelector("figcaption");
 const forecastContainer = document.querySelector("#forecast-container");
 
 const API_KEY = "d1ab66bc3d56f5b0ac207cdae03b249e";
-const lat = 49.75; // 위도
-const lon = 6.64; // 경도
+const lat = 16.77; // 위도
+const lon = 3.0; // 경도
 
 // API 호출 URL
 const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+
+// 단어의 첫 글자를 대문자로 변환하는 함수
+function capitalizeWords(str) {
+  return str
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
 
 // 날씨 데이터를 화면에 표시하는 함수
 function displayResults(data) {
@@ -20,7 +28,9 @@ function displayResults(data) {
 
   // 현재 날씨 설명 및 아이콘 표시
   const iconsrc = `https://openweathermap.org/img/w/${currentWeatherData.weather[0].icon}.png`;
-  const desc = currentWeatherData.weather[0].description;
+  const desc = capitalizeWords(
+    currentWeatherData.weather.map((w) => w.description).join(", ")
+  );
   weatherIcon.setAttribute("src", iconsrc);
   weatherIcon.setAttribute("alt", desc);
   captionDesc.textContent = desc;
@@ -36,9 +46,14 @@ function displayResults(data) {
     forecastTemp.classList.add("forecast-item");
 
     if (forecastData && forecastData.main && forecastData.main.temp) {
+      const description = capitalizeWords(
+        forecastData.weather.map((w) => w.description).join(", ")
+      );
       forecastTemp.innerHTML = `
-        <strong>Day ${i + 1}:</strong> ${forecastData.main.temp.toFixed(1)}&deg;C
-        <br><em>${forecastData.weather[0].description}</em>
+        <strong>Day ${i + 1}:</strong> ${Math.round(
+        forecastData.main.temp
+      )}&deg;C
+        <br><em>${description}</em>
       `;
     } else {
       forecastTemp.innerHTML = `<strong>Day ${i + 1}:</strong> N/A`; // 데이터가 없을 때
