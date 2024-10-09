@@ -178,7 +178,7 @@ main {
 .cta-button {
   display: inline-block; /* Allow margins */
   padding: 10px 20px;
-  background-color: #007BFF; /* Green button */
+  background-color: #129330;
   color: #fff;
   border: none;
   border-radius: 5px; /* Rounded corners */
@@ -187,7 +187,7 @@ main {
 }
 
 .cta-button:hover {
-  background-color: #0056b3; /* Darker green on hover */
+  background-color: #218838; /* Darker green on hover */
 }
 
 /* Current Events */
