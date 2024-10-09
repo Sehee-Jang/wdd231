@@ -33,7 +33,18 @@ select,
 textarea {
   width: 100%;
   padding: 8px;
-  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+input, select {
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+textarea {
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    resize: vertical; /* 수직 방향으로만 크기 조절 가능 */
 }
 
 /* Header Styles */
