@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timbuktu Chamber of Commerce Directory - Sehee Jang</title>
     <meta
@@ -22,7 +22,7 @@
       property="og:title"
       content="Timbuktu Chamber of Commerce - Community & Business"
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website">
     <meta
       property="og:url"
       content="https://sehee-jang.github.io/wdd231/chamber/directory.html"
@@ -36,8 +36,8 @@
       content="Discover local businesses in Timbuktu. Find bakeries, bookstores, fitness centers, and more, complete with contact information and descriptions."
     />
   </head>
-<body>
-    <header></header>
+  <body>
+    <header>
       <div class="logo-container">
         <img src="images/logo.png" alt="Timbuktu Chamber of Commerce Logo" />
         <div class="business-name">
@@ -53,26 +53,49 @@
         <div class="nav-links">
           <a href="./index.html">Home</a>
           <a href="./directory.html">Directory</a>
-          <a href="#">Join</a>
-          <a href="#">Discover</a>
+          <a href="./join.html">Join</a>
+          <a href="./discover.html">Discover</a>
         </div>
       </nav>
     </header>
-    
-    <main>
-        <h1>Thank You for Joining!</h1>
-        <h2>Your Membership Information</h2>
-        <p>First Name: <span id="display-first-name"></span></p>
-        <p>Last Name: <span id="display-last-name"></span></p>
-        <p>Email: <span id="display-email"></span></p>
-        <p>Mobile Number: <span id="display-mobile"></span></p>
-        <p>Business Name: <span id="display-business-name"></span></p>
-        <p>Timestamp: <span id="display-timestamp"></span></p>
+
+    <main class="thank-you-container">
+      <h1>Thank You for Joining!</h1>
+      <p>
+        Your information has been successfully submitted. Here are the details:
+      </p>
+
+      <div class="user-info">
+        <h2>Your Details:</h2>
+        <p><strong>First Name:</strong> <span id="first-name"></span></p>
+        <p><strong>Last Name:</strong> <span id="last-name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="mobile"></span></p>
+        <p><strong>Business Name:</strong> <span id="business-name"></span></p>
+        <p><strong>Submission Date:</strong> <span id="timestamp"></span></p>
+      </div>
+
+      <a href="index.html" class="button">Return to Home</a>
     </main>
 
     <footer>
-        <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
+      <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
     </footer>
 
     <script>
-        const params = new URLSearch
+      // Get the URL parameters
+      const params = new URLSearchParams(window.location.search);
+      // Populate the spans with the values from the URL
+      document.getElementById("first-name").textContent =
+        params.get("first-name");
+      document.getElementById("last-name").textContent =
+        params.get("last-name");
+      document.getElementById("email").textContent = params.get("email");
+      document.getElementById("mobile").textContent = params.get("mobile");
+      document.getElementById("business-name").textContent =
+        params.get("business-name");
+      document.getElementById("timestamp").textContent =
+        params.get("timestamp");
+    </script>
+  </body>
+</html>
