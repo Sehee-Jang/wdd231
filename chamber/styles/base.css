@@ -189,6 +189,10 @@ main {
 .cta-button:hover {
   background-color: #1f8a32; /* Darker green on hover */
 }
+.cta-button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
 
 /* Current Events */
 .events-title {
