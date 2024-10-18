@@ -36,15 +36,16 @@ textarea {
   box-sizing: border-box;
 }
 
-input, select {
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
+input,
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 textarea {
-    border: 1px solid #ccc; 
-    border-radius: 4px;
-    resize: vertical; /* 수직 방향으로만 크기 조절 가능 */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; /* 수직 방향으로만 크기 조절 가능 */
 }
 
 /* Header Styles */
@@ -393,6 +394,110 @@ main {
   font-weight: bold;
 }
 
+/* Discover Page */
+.gallery img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+/* Sidebar Layout */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  background-color: #f4f4f4;
+  max-width: 300px; /* 사이드바 너비 설정 */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+/* Section 스타일 */
+.sidebar section {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* 제목 스타일 */
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* 리스트 스타일 */
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  padding: 5px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* 방문자 메시지 스타일 */
+
+.discover-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 사이드바는 1fr, 갤러리 섹션은 3fr */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 방문자 메시지 */
+.visitor-message {
+  background-color: #e0f7fa;
+  color: #00796b;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* 갤러리 섹션 스타일 */
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 3개의 이미지가 가로로 배치됨 */
+  gap: 10px;
+}
+
+.image-grid figure {
+  position: relative;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.image-grid figcaption {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05); /* 호버 시 이미지 확대 */
+}
+
+/* 모바일 뷰에서는 단일 열 레이아웃 */
+@media (max-width: 768px) {
+}
+
 /* Footer */
 footer {
   display: flex; /* Enable Flexbox */
@@ -436,40 +541,39 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
-    header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .hamburger {
-      display: block; /* 모바일에서는 햄버거 버튼 보이기 */
-    }
-
-    /* 햄버거 클릭 시 보여짐 */
-    nav.active .nav-links {
-      display: flex; /* 햄버거 클릭 시 가로로 메뉴 표시 */
-      flex-direction: column; /* 세로 정렬 */
-      background-color: #004080; /* 배경색 추가 (헤더와 동일하게) */
-      padding: 10px 20px; /* 메뉴 사이의 여백 */
-      position: absolute; /* 메뉴를 헤더 아래에 위치시키기 */
-      top: 60px; /* 헤더 높이 만큼 떨어뜨리기 */
-      left: 0;
-      width: 100%; /* 전체 너비 차지 */
-    }
-
-    nav .nav-links {
-      display: none;
-      z-index: 999 !important;
-    }
-    nav a {
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  .hamburger {
+    display: block; /* 모바일에서는 햄버거 버튼 보이기 */
+  }
+
+  /* 햄버거 클릭 시 보여짐 */
+  nav.active .nav-links {
+    display: flex; /* 햄버거 클릭 시 가로로 메뉴 표시 */
+    flex-direction: column; /* 세로 정렬 */
+    background-color: #004080; /* 배경색 추가 (헤더와 동일하게) */
+    padding: 10px 20px; /* 메뉴 사이의 여백 */
+    position: absolute; /* 메뉴를 헤더 아래에 위치시키기 */
+    top: 60px; /* 헤더 높이 만큼 떨어뜨리기 */
+    left: 0;
+    width: 100%; /* 전체 너비 차지 */
+  }
+
+  nav .nav-links {
+    display: none;
+    z-index: 999 !important;
+  }
+  nav a {
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffd700;
+  }
+
   .hero {
     height: 200px;
   }
@@ -494,6 +598,17 @@ footer {
   .business-info,
   .social-media,
   .developer-info {
-    margin: 10px 0; /* Vertical spacing between stacked divs */
+    margin: 10px;
+  }
+
+  .discover-container {
+    grid-template-columns: 1fr; /* 사이드바와 갤러리 모두 단일 열 */
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr; /* 이미지도 한 줄에 한 개씩 표시 */
+  }
+  .image-grid img:hover {
+    transform: none;
   }
 }

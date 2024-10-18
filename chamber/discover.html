@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timbuktu Chamber of Commerce Directory - Sehee Jang</title>
     <meta
@@ -19,10 +19,9 @@
 
     <!-- meta tags for Facebook-->
     <meta
-      property="og:title"
-      content="Timbuktu Chamber of Commerce - Community & Business"
+      property="og:title" content="Timbuktu Chamber of Commerce - Community & Business"
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website">
     <meta
       property="og:url"
       content="https://sehee-jang.github.io/wdd231/chamber/directory.html"
@@ -59,10 +58,99 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Discover Page</h1>
-    </main>
+    <main class="discover-container">
+      <aside class="sidebar">
+        <!-- 방문자 메시지 -->
+        <section class="visitor-message">
+          <h3>Your Visit Information</h3>
+          <p id="visit-message">
+            Welcome! Let us know if you have any questions.
+          </p>
+        </section>
 
+        <!-- 인구 통계 -->
+        <section class="demographics">
+          <h3>Demographics</h3>
+          <p>Population: 50,000</p>
+          <p>Age Distribution:</p>
+          <ul>
+            <li>Under 18: 25%</li>
+            <li>18-64: 60%</li>
+            <li>65 and older: 15%</li>
+          </ul>
+          <p>Gender Ratio: 48% Male, 52% Female</p>
+        </section>
+
+        <!-- 지역 이벤트 -->
+        <section class="events">
+          <h3>Upcoming Events</h3>
+          <ul>
+            <li>Fall Festival - October 25th, 2024</li>
+            <li>Business Expo - November 12th, 2024</li>
+            <li>Local Farmers Market - Every Saturday</li>
+          </ul>
+        </section>
+
+        <!-- 관광 명소 -->
+        <section class="tourist-attractions">
+          <h3>Tourist Attractions</h3>
+          <ul>
+            <li>
+              <strong>Grand Park</strong>: A large park with scenic views and
+              walking trails.
+            </li>
+            <li>
+              <strong>Historic Downtown</strong>: Explore the rich history of
+              our city.
+            </li>
+            <li>
+              <strong>Local Museum</strong>: Featuring exhibitions on the area’s
+              culture.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 지역 경제 통계 -->
+        <section class="economic-stats">
+          <h3>Economic Statistics</h3>
+          <ul>
+            <li>Local GDP Growth: 3.5%</li>
+            <li>Top Industries: Manufacturing, Tourism, Technology</li>
+            <li>Small Business Growth: 25% increase in the last year</li>
+          </ul>
+        </section>
+      </aside>
+
+      <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="image-grid">
+          <figure>
+            <img src="images/gallery-image1.jpg" alt="Scenic park view" loading="lazy" />
+            <figcaption>Scenic Park View</figcaption>
+          </figure>
+          <figure>
+            <img src="images/gallery-image2.jpg" alt="Historic downtown" loading="lazy" />
+            <figcaption>Historic Downtown</figcaption>
+          </figure>
+          <figure>
+            <img src="images/gallery-image3.jpg" alt="Local museum exhibit" loading="lazy" />
+            <figcaption>Local Museum Exhibit</figcaption>
+          </figure>
+          <figure>
+            <img src="images/gallery-image4.jpg" alt="Cultural festival" loading="lazy" />
+            <figcaption>Cultural Festival</figcaption>
+          </figure>
+          <figure>
+            <img src="images/gallery-image5.jpg" alt="Night market" loading="lazy" />
+            <figcaption>Night Market</figcaption>
+          </figure>
+          <figure>
+            <img src="images/gallery-image6.jpg" alt="Mountain trail" loading="lazy" />
+            <figcaption>Mountain Trail</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <footer>
       <div class="business-info">
@@ -95,5 +183,6 @@
     </footer>
 
     <!-- script -->
+    <script src="./scripts/lastVisit.js"></script>
   </body>
 </html>
