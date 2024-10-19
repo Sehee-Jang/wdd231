@@ -78,12 +78,12 @@ header .business-name .bs-2 {
   font-weight: normal;
 }
 
-/* 햄버거 버튼 */
+/* Hamburger Button */
 .hamburger {
   font-size: 30px;
   cursor: pointer;
   margin-left: auto;
-  display: none; /* 기본적으로 데스크탑 화면에서는 숨김 */
+  display: none;
 }
 
 /* Nav styles */
@@ -102,9 +102,8 @@ nav a {
   text-decoration: none;
 }
 
-/* 기본적으로 숨김 */
 nav .nav-links {
-  display: flex; /* 기본적으로 보여짐 */
+  display: flex;
 }
 
 /* Main Section Styles */
@@ -116,7 +115,7 @@ main {
 .hero {
   position: relative;
   overflow: hidden;
-  height: 300px; /* Adjust height as necessary */
+  height: 300px;
 }
 
 .hero img {
@@ -130,7 +129,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: #0151c1; /* Button color */
+  background-color: #0151c1;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -154,29 +153,29 @@ main {
 
 .menu {
   display: flex;
-  justify-content: center; /* 중앙 정렬 */
-  margin: 20px 0; /* 위아래 여백 */
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .menu button {
-  padding: 10px 20px; /* 버튼 패딩 */
-  margin: 0 10px; /* 버튼 사이의 간격 */
-  background-color: #0151c1; /* 버튼 색상 */
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #0151c1;
   color: #fff;
   font-weight: bold;
   border: none;
   cursor: pointer;
-  border-radius: 5px; /* 둥근 모서리 */
+  border-radius: 5px;
 }
 
 .menu button:hover {
-  background-color: #0056b3; /* 호버 시 색상 변화 */
+  background-color: #0056b3;
 }
 
 /* CTA Section Styles */
 .cta-container {
   text-align: center;
-  margin: 20px 0; /* Spacing above and below */
+  margin: 20px 0;
 }
 
 .cta-title {
@@ -189,18 +188,18 @@ main {
 }
 
 .cta-button {
-  display: inline-block; /* Allow margins */
+  display: inline-block;
   padding: 10px 20px;
   background-color: #11541b;
   color: #fff;
   border: none;
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* No underline */
-  transition: background-color 0.3s; /* Smooth transition */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #1f8a32; /* Darker green on hover */
+  background-color: #1f8a32;
 }
 .cta-button:focus {
   outline: 2px solid #fff;
@@ -209,130 +208,130 @@ main {
 
 /* Current Events */
 .events-title {
-  font-size: 28px; /* Font size for title */
-  color: #007bff; /* Color for title */
-  margin-bottom: 20px; /* Space below title */
-  text-align: center; /* Centered text */
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .event-item {
-  background-color: #fff; /* White background for event items */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 5px; /* Rounded corners for event items */
-  padding: 15px; /* Spacing inside event items */
-  margin-bottom: 15px; /* Space below each event item */
-  transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s;
 }
 
 .event-item:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .event-title {
-  font-size: 22px; /* Font size for event titles */
-  color: #333; /* Dark text color */
-  margin-bottom: 5px; /* Space below title */
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .event-date {
-  font-size: 14px; /* Font size for event date */
-  color: #004080; /* Lighter text color */
-  margin-bottom: 10px; /* Space below date */
+  font-size: 14px;
+  color: #004080;
+  margin-bottom: 10px;
 }
 
 .event-description {
-  font-size: 16px; /* Font size for description */
-  color: #555; /* Medium text color */
-  margin-bottom: 15px; /* Space below description */
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
 }
 
 .event-link {
-  text-decoration: none; /* Remove underline */
-  color: #004080; /* Button color */
-  font-weight: bold; /* Bold text for the link */
-  transition: color 0.3s; /* Smooth transition for hover */
+  text-decoration: none;
+  color: #004080;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .event-link:hover {
-  color: #0056b3; /* Darker shade on hover */
+  color: #0056b3;
 }
+
 /* Sppotlight Section */
-/* 전체 섹션 스타일 */
 .spotlight-members {
   display: flex;
-  flex-wrap: wrap; /* 여러 줄로 배치 가능 */
-  justify-content: center; /* 중앙 정렬 */
-  padding: 20px; /* 상하 여백 */
-  background-color: #f8f9fa; /* 배경색 */
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f9fa;
 }
 
 /* 개별 카드 스타일 */
 .spotlight-member {
-  background-color: #ffffff; /* 카드 배경색 */
-  border: 1px solid #ddd; /* 카드 테두리 */
-  border-radius: 8px; /* 둥근 모서리 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  margin: 15px; /* 카드 간의 여백 */
-  padding: 20px; /* 카드 내부 여백 */
-  text-align: center; /* 텍스트 중앙 정렬 */
-  transition: transform 0.3s, box-shadow 0.3s; /* 전환 효과 */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* 카드에 호버 효과 */
 .spotlight-member:hover {
-  transform: translateY(-5px); /* 위로 살짝 떠오르는 효과 */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 깊이 증가 */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* 이미지 스타일 */
 .spotlight-member img {
-  width: 100px; /* 이미지 너비 */
-  height: 100px; /* 이미지 높이 */
-  border-radius: 50%; /* 둥근 이미지 */
-  margin-bottom: 15px; /* 이미지와 텍스트 간 여백 */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
 /* 이름 스타일 */
 .spotlight-member h3 {
-  font-size: 1.5rem; /* 이름 크기 */
-  margin: 10px 0; /* 이름 간 여백 */
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 
 /* 역할 또는 설명 스타일 */
 .spotlight-member p {
-  font-size: 1rem; /* 설명 크기 */
-  color: #666; /* 설명 색상 */
+  font-size: 1rem;
+  color: #666;
 }
 
 /* Spotlight Members Cards & Business Cards */
 .spotlight-members-cards,
 .business-cards {
-  display: flex; /* Enable Flexbox */
-  flex-wrap: wrap; /* Allow wrapping to the next line */
-  justify-content: space-between; /* Space out cards */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 20px;
 }
 
 .spotlight-card,
 .business-card {
-  flex: 1 1 calc(30% - 20px); /* Each card takes up about 30% of the row with space for margins */
-  margin: 10px; /* Margin around each card */
+  flex: 1 1 calc(30% - 20px);
+  margin: 10px;
   padding: 15px;
   background-color: #eaeaea;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-  word-wrap: break-word; /* 긴 단어를 줄바꿈 */
-  overflow-wrap: break-word; /* 긴 단어를 줄바꿈 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .spotlight-card img,
 .business-card img {
-  max-width: 100%; /* 이미지가 부모 요소 너비를 넘지 않도록 */
-  height: auto; /* 이미지 비율을 유지 */
-  display: block; /* 이미지 주변의 불필요한 여백을 없앰 */
-  border-radius: 8px; /* 이미지 모서리를 둥글게 (카드와 일치) */
-  object-fit: cover; /* 이미지가 카드 크기 안에서 잘리더라도 맞춰서 표시 */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .grid-view {
@@ -346,25 +345,58 @@ main {
 }
 
 .list-view .business-card {
-  flex: 1 1 auto; /* Full width for list view */
+  flex: 1 1 auto;
 }
+
 /* Join Page */
 .membership-cards {
   display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-.card {
+.membership-cards .card {
+  flex: 1 1 calc(25% - 20px);
+  padding: 20px;
+  background-color: #fff;
   border: 1px solid #ccc;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 5px;
-  transition: transform 0.3s;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.6s ease-out;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card button {
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.card button:hover {
+  background-color: #0059b3;
+}
+
+.membership-cards .card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .modal {
@@ -399,19 +431,18 @@ main {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-/* Sidebar Layout */
+
 .sidebar {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 15px;
   background-color: #f4f4f4;
-  max-width: 300px; /* 사이드바 너비 설정 */
+  max-width: 300px;
   border: 1px solid #ddd;
   border-radius: 10px;
 }
 
-/* Section 스타일 */
 .sidebar section {
   padding: 10px;
   background-color: #fff;
@@ -419,14 +450,12 @@ main {
   border-radius: 8px;
 }
 
-/* 제목 스타일 */
 .sidebar h3 {
   margin-top: 0;
   font-size: 1.2em;
   color: #333;
 }
 
-/* 리스트 스타일 */
 .sidebar ul {
   list-style-type: none;
   padding-left: 0;
@@ -438,8 +467,6 @@ main {
   color: #555;
 }
 
-/* 방문자 메시지 스타일 */
-
 .discover-container {
   display: grid;
   grid-template-columns: 1fr 3fr; /* 사이드바는 1fr, 갤러리 섹션은 3fr */
@@ -447,7 +474,6 @@ main {
   padding: 20px;
 }
 
-/* 방문자 메시지 */
 .visitor-message {
   background-color: #e0f7fa;
   color: #00796b;
@@ -491,11 +517,7 @@ main {
 }
 
 .image-grid img:hover {
-  transform: scale(1.05); /* 호버 시 이미지 확대 */
-}
-
-/* 모바일 뷰에서는 단일 열 레이아웃 */
-@media (max-width: 768px) {
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -588,6 +610,10 @@ footer {
   }
   .business-card {
     flex: 1 1 100%; /* Full width for mobile */
+  }
+
+  .membership-cards .card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row */
   }
 
   footer {

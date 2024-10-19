@@ -12,3 +12,14 @@ window.onclick = function (event) {
     event.target.style.display = "none";
   }
 };
+
+window.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".membership-cards .card");
+  cards.forEach((card) => {
+    setTimeout(() => {
+      card.classList.add("visible");
+    }, 800);
+  });
+});
+
+
