@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineQuest</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+    <link rel="icon" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <header class="header ty3">
+      <div class="top">
+        <h1 class="logo"><a href="/cinequest/index.html">CineQuest</a></h1>
+
+        <!-- Search Bar -->
+        <form role="search" class="search">
+          <input
+            type="text"
+            placeholder="Search for a movie..."
+            title="Search Movie"
+            class="input_text"
+            id="search_input"
+          />
+          <button class="search_button" id="search_button">
+            <i class="iconset ico_search"></i> Search
+          </button>
+        </form>
+      </div>
+
+      <div id="nav">
+        <ul id="navMenu">
+          <li class="">
+            <a href="#">Genres</a>
+            <div>
+              <ul>
+                <li><a href="#" title="Action">Action</a></li>
+                <li><a href="#" title="Comedies">Comedies</a></li>
+                <li><a href="#" title="Crime">Crime</a></li>
+                <li><a href="#" title="Sci-Fi">Sci-Fi</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="">
+            <a href="#">Year</a>
+            <div>
+              <ul>
+                <li><a href="#" title="Action">2020</a></li>
+                <li><a href="#" title="Comedies">2010</a></li>
+                <li><a href="#" title="Crime">2000</a></li>
+                <li><a href="#" title="Sci-Fi">1990</a></li>
+                <li><a href="#" title="Sci-Fi">1980</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="">
+            <a href="#">Countries</a>
+            <div>
+              <ul>
+                <li><a href="#" title="Action">US</a></li>
+                <li><a href="#" title="Comedies">UK</a></li>
+                <li><a href="#" title="Crime">South Korea</a></li>
+                <li><a href="#" title="Sci-Fi">Japan</a></li>
+                <li><a href="#" title="Sci-Fi">China</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="">
+            <a href="#">Ranking</a>
+            <div>
+              <ul>
+                <li><a href="#" title="Action">5 Stars</a></li>
+                <li><a href="#" title="Comedies">4 Stars</a></li>
+                <li><a href="#" title="Crime">3 Stars</a></li>
+                <li><a href="#" title="Sci-Fi">2 Stars</a></li>
+                <li><a href="#" title="Sci-Fi">1 Star</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="wrap_nav_underline">
+            <span class="nav_underline"></span>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="detaillWrap">
+        <!-- Movie Details -->
+      </div>
+    </main>
+    <button id="top-btn" onclick="toTop()">▲<br />Top</button>
+    <footer>
+      <p>&copy; 2024 CineQuest | <a href="attribution.html">Attributions</a></p>
+    </footer>
+    <script type="module" src="js/detail.js"></script>
+    <script src="js/top.js"></script>
+  </body>
+</html>

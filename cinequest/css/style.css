@@ -1,0 +1,101 @@
+/* Main */
+main {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Card List */
+section {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main_movie_list > ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.main_movie_list > ol li {
+  margin: 0;
+  padding: 0;
+}
+
+.main_movie_list > ol li .movie_list_info {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #24202b;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.main_movie_list > ol li .movie_list_info img.poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.main_movie_list > ol li .movie_list_info .wrap {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 25px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main_movie_list > ol li .movie_list_info .wrap:hover,
+.main_movie_list > ol li .movie_list_info .wrap:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main_movie_list > ol li .movie_list_info .wrap .title {
+  margin-bottom: 10px;
+}
+
+.main_movie_list > ol li .movie_list_info .wrap .summary {
+  overflow: hidden;
+  height: 152px;
+  font-size: 14px;
+}
+
+.main_movie_list > ol li .movie_list_info .wrap .score {
+  overflow: hidden;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 0 0 0;
+  text-align: center;
+  border-top: 1px solid #3c3c3c;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main_movie_list > ol {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* 작은 화면에서는 1열 또는 2열로 표시 */
+  }
+}
+
+@media (max-width: 480px) {
+  .main_movie_list > ol {
+    grid-template-columns: repeat(1, 1fr); /* 모바일 화면에서는 1열로 표시 */
+  }
+}
