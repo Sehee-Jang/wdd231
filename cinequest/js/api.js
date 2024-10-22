@@ -60,7 +60,7 @@ export async function fetchMovieDetails(movieId) {
     const apiUrl = `${baseUrl}/3/movie/${movieId}?api_key=${API_KEY}&language=en-US&append_to_response=credits`;
     const response = await fetch(apiUrl, options);
     const data = await response.json();
-    console.log("Detail data", data);
+    // console.log("Detail data", data);
     return {
       cast: data.credits.cast.slice(0, 8),
       releaseDate: data.release_date,
@@ -74,19 +74,44 @@ export async function fetchMovieDetails(movieId) {
 }
 
 // Fetch
+// if (window.location.pathname.includes("index.html")) {
+//   fetch(URL)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       // console.log(data);
+//       const movies = data.results;
+//       const cardContainer = document.getElementById("cards");
+//       movies.forEach((movie) => {
+//         const movieCard = createMovieCard(movie);
+//         cardContainer.appendChild(movieCard);
+//       });
+//     })
+//     .catch((error) => console.error("Error:", error));
+// }
+
+// Fetch Movies Function
+async function fetchMovies(url, containerId) {
+  try {
+    const response = await fetch(url, options);
+    const data = await response.json();
+    const movies = data.results;
+    const cardContainer = document.getElementById(containerId);
+    cardContainer.innerHTML = ""; // Clear the container
+    movies.forEach((movie) => {
+      const movieCard = createMovieCard(movie);
+      cardContainer.appendChild(movieCard);
+    });
+  } catch (error) {
+    console.error("Error fetching movies:", error);
+  }
+}
+
+// Fetching movies for each category
 if (window.location.pathname.includes("index.html")) {
-  fetch(URL)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      const movies = data.results;
-      const cardContainer = document.getElementById("cards");
-      movies.forEach((movie) => {
-        const movieCard = createMovieCard(movie);
-        cardContainer.appendChild(movieCard);
-      });
-    })
-    .catch((error) => console.error("Error:", error));
+  fetchMovies(upcomingUrl, "upcoming-movies");
+  fetchMovies(popularUrl, "popular-movies");
+  fetchMovies(topUrl, "top-rated-movies");
+  fetchMovies(nowUrl, "now-playing-movies");
 }
 
 // Moview Title Search
