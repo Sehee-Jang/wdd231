@@ -60,7 +60,7 @@ export async function fetchMovieDetails(movieId) {
     const apiUrl = `${baseUrl}/3/movie/${movieId}?api_key=${API_KEY}&language=en-US&append_to_response=credits`;
     const response = await fetch(apiUrl, options);
     const data = await response.json();
-    // console.log("Detail data", data);
+    console.log("Detail data", data);
     return {
       cast: data.credits.cast.slice(0, 8),
       releaseDate: data.release_date,
@@ -74,11 +74,11 @@ export async function fetchMovieDetails(movieId) {
 }
 
 // Fetch
-if (window.location.pathname === "/cinequest/index.html") {
+if (window.location.pathname.includes("index.html")) {
   fetch(URL)
     .then((response) => response.json())
     .then((data) => {
-      // console.log(data);
+      console.log(data);
       const movies = data.results;
       const cardContainer = document.getElementById("cards");
       movies.forEach((movie) => {

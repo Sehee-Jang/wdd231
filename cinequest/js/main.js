@@ -64,7 +64,7 @@ export async function fetchMovieDetails(movieId) {
 fetch(URL)
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data);
+    console.log(data);
     const movies = data.results;
     const cardContainer = document.getElementById("cards");
     movies.forEach((movie) => {
