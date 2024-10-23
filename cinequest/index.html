@@ -27,11 +27,32 @@
           </button>
         </form>
       </div>
-
+      
+      <!-- Navigation -->
       <div id="nav">
         <ul id="navMenu">
           <li class="">
-            <a href="#">Genres</a>
+            <a href="upcoming.html">Upcoming</a>
+          </li>
+          <li class="">
+            <a href="popular.html">Popular</a>
+          </li>
+          <li class="">
+            <a href="top.html">Top Rated</a>
+          </li>
+          <li class="">
+            <a href="nowplaying.html">Now Playing</a>
+          </li>
+          
+          <li class="wrap_nav_underline">
+            <span class="nav_underline"></span>
+          </li>
+        </ul>
+      </div>
+      <!-- <div id="nav">
+        <ul id="navMenu">
+          <li class="">
+            <a href="#" class="nav-item" data-filter="genre">Genres</a>
             <div>
               <ul>
                 <li><a href="#" title="Action">Action</a></li>
@@ -42,7 +63,7 @@
             </div>
           </li>
           <li class="">
-            <a href="#">Year</a>
+            <a href="#" class="nav-item" data-filter="year">Year</a>
             <div>
               <ul>
                 <li><a href="#" title="Action">2020</a></li>
@@ -54,7 +75,7 @@
             </div>
           </li>
           <li class="">
-            <a href="#">Countries</a>
+            <a href="#"class="nav-item" data-filter=" countries">Countries</a>
             <div>
               <ul>
                 <li><a href="#" title="Action">US</a></li>
@@ -66,7 +87,7 @@
             </div>
           </li>
           <li class="">
-            <a href="#">Ranking</a>
+            <a href="#" class="nav-item" data-filter="ranking">Ranking</a>
             <div>
               <ul>
                 <li><a href="#" title="Action">5 Stars</a></li>
@@ -81,45 +102,28 @@
             <span class="nav_underline"></span>
           </li>
         </ul>
-      </div>
+      </div> -->
     </header>
 
+    <!-- Main -->
     <main>
-      <!-- Movie List-->
-       <!-- <section class="main_movie_list" id="movie-container">
+       <section class="main_movie_list" id="movie-container">
             <ol id="cards" class="cards">
-                
+                <!-- Movie List-->
             </ol>
-        </section> -->
-
-        <section class="main_movie_list">
-          <h2>Upcoming Movies</h2>
-
-            <ol id="upcoming-movies" class="cards"></ol>
-
-        </section>
-
-        <section class="main_movie_list">
-          <h2>Top Picks</h2>
-          <ol id="popular-movies" class="cards"></ol>
-        </section>
-
-        <section class="main_movie_list">
-          <h2>Top Rated</h2>
-          <ol id="top-rated-movies" class="cards"></ol>
-        </section>
-
-        <section class="main_movie_list">
-         <h2>Now Playing</h2>
-           <ol id="now-playing-movies" class="cards"></ol>
         </section>
       </section>
     </main>
+
+    <!-- Top Button -->
     <button id="top-btn" onclick="toTop()">▲<br />Top</button>
+
+    <!-- Footer -->
     <footer>
       <p>&copy; 2024 CineQuest | <a href="attribution.html">Attributions</a></p>
     </footer>
-    
+
+    <!-- Script -->
     <script type="module" src="js/api.js"></script>
     <script src="js/top.js"></script>
     <script src="js/toggle.js"></script>

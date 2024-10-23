@@ -74,26 +74,27 @@ export async function fetchMovieDetails(movieId) {
 }
 
 // Fetch
-// if (window.location.pathname.includes("index.html")) {
-//   fetch(URL)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       // console.log(data);
-//       const movies = data.results;
-//       const cardContainer = document.getElementById("cards");
-//       movies.forEach((movie) => {
-//         const movieCard = createMovieCard(movie);
-//         cardContainer.appendChild(movieCard);
-//       });
-//     })
-//     .catch((error) => console.error("Error:", error));
-// }
+if (window.location.pathname.includes("index.html")) {
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      // console.log(data);
+      const movies = data.results;
+      const cardContainer = document.getElementById("cards");
+      movies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        cardContainer.appendChild(movieCard);
+      });
+    })
+    .catch((error) => console.error("Error:", error));
+}
 
 // Fetch Movies Function
 async function fetchMovies(url, containerId) {
   try {
     const response = await fetch(url, options);
     const data = await response.json();
+    // console.log(data);
     const movies = data.results;
     const cardContainer = document.getElementById(containerId);
     cardContainer.innerHTML = ""; // Clear the container
@@ -107,15 +108,26 @@ async function fetchMovies(url, containerId) {
 }
 
 // Fetching movies for each category
-if (window.location.pathname.includes("index.html")) {
+if (window.location.pathname.includes("upcoming.html")) {
   fetchMovies(upcomingUrl, "upcoming-movies");
+}
+
+if (window.location.pathname.includes("popular.html")) {
   fetchMovies(popularUrl, "popular-movies");
+}
+
+if (window.location.pathname.includes("top.html")) {
   fetchMovies(topUrl, "top-rated-movies");
+}
+
+if (window.location.pathname.includes("nowplaying.html")) {
   fetchMovies(nowUrl, "now-playing-movies");
 }
 
 // Moview Title Search
-document.getElementById("search_button").addEventListener("click", () => {
+document.getElementById("search_button").addEventListener("click", (e) => {
+  event.preventDefault();
+
   const query = document.getElementById("search_input").value.toLowerCase();
   const movieCards = document.querySelectorAll(".card");
   movieCards.forEach((card) => {
