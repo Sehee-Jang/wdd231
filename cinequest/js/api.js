@@ -48,7 +48,7 @@ function createMovieCard(movie) {
   });
 
   movieCard.addEventListener("click", () => {
-    window.location.href = `/cinequest/pages/detail.html?id=${movie.id}`;
+    window.location.href = `./pages/detail.html?id=${movie.id}`;
   });
 
   return movieCard;
