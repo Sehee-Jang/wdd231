@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toTop() {
-  console.log("clicked.");
   window.scroll({
     behavior: "smooth",
     top: 0,
