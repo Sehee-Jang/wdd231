@@ -48,7 +48,17 @@ function createMovieCard(movie) {
   });
 
   movieCard.addEventListener("click", () => {
-    window.location.href = `./pages/detail.html?id=${movie.id}`;
+    // window.location.href = `../pages/detail.html?id=${movie.id}`;
+    // 현재 페이지가 index.html인지 확인
+    const isIndexPage = window.location.pathname.endsWith("index.html");
+
+    // 경로 설정
+    const detailPage = isIndexPage
+      ? "pages/detail.html"
+      : "../pages/detail.html";
+
+    // 디테일 페이지로 이동
+    window.location.href = `${detailPage}?id=${movie.id}`;
   });
 
   return movieCard;
