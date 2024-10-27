@@ -3,48 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Site Plan for Individual Project" />
-    <title>Project Site Plan</title>
-    <link rel="icon" href="favicon.ico" />
+    <title>CineQuest</title>
+    <link rel="stylesheet" href="/cinequest/css/base.css" />
+    <link rel="stylesheet" href="/cinequest/css/style.css" />
+    <link rel="icon" href="/cinequest/assets/favicon.ico" />
+
     <style>
-      /* Color Schema */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f4f8;
-        color: #333;
+      main {
+        padding: 50px 20px;
+        text-align: left;
       }
-
-      h1,
-      h2 {
-        color: #2b6cb0;
-      }
-
-      .content {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      h2 {
-        margin-top: 30px;
-      }
-
       section {
-        margin-bottom: 20px;
+        padding: 15px 0;
       }
 
-      /* Typography */
+      .logo{
+         border-bottom: none;
+      }
       h1 {
-        font-size: 2rem;
+        display:inline-block;
+        padding-bottom :10px;
+        margin-bottom: 40px;
+        border-bottom: 3px solid var(--primary_color);
       }
 
       h2 {
-        font-size: 1.5rem;
+        display: inline-block;
+        margin-bottom: 8px;
+        border-bottom: 3px solid var(--secondary_color);
       }
 
       p {
-        font-size: 1rem;
-        line-height: 1.6;
+        padding: 5px;
       }
 
       /* Wireframe Placeholder */
@@ -99,9 +89,51 @@
       }
     </style>
   </head>
-
   <body>
-    <div class="content">
+    <!-- Header -->
+    <header class="header ty3">
+      <div class="top">
+        <h1 class="logo"><a href="/cinequest/index.html">CineQuest</a></h1>
+
+        <!-- Search Bar -->
+        <form role="search" class="search">
+          <input
+            type="text"
+            placeholder="Search for a movie..."
+            title="Search Movie"
+            class="input_text"
+            id="search_input"
+          />
+          <button class="search_button" id="search_button">
+            <i class="iconset ico_search"></i> Search
+          </button>
+        </form>
+      </div>
+
+      <!-- Navigation -->
+      <div id="nav">
+        <ul id="navMenu">
+          <li class="">
+            <a href="/cinequest/pages/upcoming.html">Upcoming</a>
+          </li>
+          <li class="">
+            <a href="/cinequest/pages/popular.html">Popular</a>
+          </li>
+          <li class="">
+            <a href="/cinequest/pages/top.html">Top Rated</a>
+          </li>
+          <li class="">
+            <a href="/cinequest/pages/nowplaying.html">Now Playing</a>
+          </li>
+
+          <li class="wrap_nav_underline">
+            <span class="nav_underline"></span>
+          </li>
+        </ul>
+      </div>
+    </header>
+<main>
+
       <h1>Project Site Plan</h1>
 
       <!-- Site Name Section -->
@@ -140,12 +172,13 @@
       <section>
         <h2>Color Schema</h2>
         <p>
-          Primary Color: <span style="color: #2b6cb0">#2b6cb0</span> (Used for
-          headings and accents)
+          Primary Color: <span style="color: #ff6347">#2b6cb0</span>
         </p>
         <p>
-          Secondary Color: <span style="color: #f0f4f8">#f0f4f8</span> (Used for
-          background)
+          Secondary Color: <span style="color: #42abae">#f0f4f8</span>
+        </p>
+        <p>
+          Background Color: <span style="color: #121212; background-color:#fff;">#121212</span>
         </p>
       </section>
 
@@ -166,19 +199,7 @@
             <div class="box">Header (Logo + Search Bar)</div>
             <div class="box">Navigation Menu</div>
             <div class="box text_box">
-              <span class="left">◀️</span>
-              <span class="text">Popular Movies</span>
-              <span class="right">▶️</span>
-            </div>
-            <div class="box text_box">
-              <span class="left">◀️</span>
-              <span class="text">Upcoming Movies</span>
-              <span class="right">▶️</span>
-            </div>
-            <div class="box text_box">
-              <span class="left">◀️</span>
-              <span class="text">Now Playing</span>
-              <span class="right">▶️</span>
+              <span class="text">Movies</span>
             </div>
             <div class="box">Footer</div>
           </div>
@@ -189,27 +210,31 @@
             <div class="box">Header (Logo + Search Bar)</div>
             <div class="box">Navigation Menu</div>
             <div class="box text_box">
-              <span class="left">◀️</span>
-              <span class="text">Popular Movies</span>
-              <span class="right">▶️</span>
+              
+              <span class="text">Movies</span>
+
             </div>
-            <div class="box text_box">
-              <span class="left">◀️</span>
-              <span class="text">Upcoming Movies</span>
-              <span class="right">▶️</span>
-            </div>
-            <div class="box text_box">
-              <span class="left">◀️</span>
-              <span class="text">Now Playing</span>
-              <span class="right">▶️</span>
-            </div>
+            
             <div class="box">Footer</div>
           </div>
         </div>
       </section>
+</main>
+      <!-- Top Button -->
+    <button id="top-btn" onclick="toTop()">▲<br />Top</button>
 
-      <!-- Footer with Attributions Link -->
-      <footer>&copy; 2024 CineQuest | <a href="#">Attributions</a></footer>
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2024 CineQuest |
+        <a href="/cinequest/pages/attribution.html">Attributions</a>
+      </p>
+    </footer>
+
+    <!-- Script -->
+     <script type="module" src="/cinequest/js/api.js"></script>
+    <script src="/cinequest/js/top.js"></script>
+    <script src="/cinequest/js/toggle.js"></script>
     </div>
   </body>
 </html>

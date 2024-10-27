@@ -1,5 +1,5 @@
-.detaillWrap{
-margin: 100px 0;
+.detaillWrap {
+  margin: 100px 0;
 }
 .posterDiv {
   margin-bottom: 100px;
@@ -21,7 +21,7 @@ margin: 100px 0;
 .detailTitle {
   font-size: 30px;
   font-weight: bold;
-  border-bottom: 3px solid #ff7211;
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .minText {
@@ -41,7 +41,7 @@ margin: 100px 0;
 .detailOverview span {
   display: inline-block;
   margin-bottom: 8px;
-  border-bottom: 3px solid #42abae;
+  border-bottom: 3px solid var(--secondary_color);
   font-size: 18px;
   font-weight: bold;
 }
@@ -55,7 +55,7 @@ margin: 100px 0;
 
 .actorTitle span {
   padding-bottom: 5px;
-  border-bottom: 3px solid #fbbc14;
+  border-bottom: 3px solid var(--tertiary_color);
 }
 
 .actorContainer {

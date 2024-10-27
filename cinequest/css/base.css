@@ -9,6 +9,9 @@
 
 /* Color Variables */
 :root {
+  --primary_color:#ff1744;
+  --secondary_color: #42abae;
+  --tertiary_color: #fbbc14;
   --background_color: #121212;
   --header_footer_bg_color: #1f1f1f;
   --text_color: #ffffff;

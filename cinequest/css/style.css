@@ -21,7 +21,7 @@ section {
   padding-bottom: 10px;
   text-transform: uppercase; 
   letter-spacing: 2px; 
-  border-bottom: 3px solid #ff6347; 
+  border-bottom: 3px solid var(--primary_color); 
 }
 
 .main_movie_list > ol {

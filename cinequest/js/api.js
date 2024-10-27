@@ -48,7 +48,7 @@ function createMovieCard(movie) {
   });
 
   movieCard.addEventListener("click", () => {
-    window.location.href = `detail.html?id=${movie.id}`;
+    window.location.href = `/cinequest/pages/detail.html?id=${movie.id}`;
   });
 
   return movieCard;
@@ -126,7 +126,7 @@ if (window.location.pathname.includes("nowplaying.html")) {
 
 // Moview Title Search
 document.getElementById("search_button").addEventListener("click", (e) => {
-  event.preventDefault();
+  e.preventDefault();
 
   const query = document.getElementById("search_input").value.toLowerCase();
   const movieCards = document.querySelectorAll(".card");
